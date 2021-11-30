@@ -28,7 +28,12 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  
+  <!-- =======================================================
+  * Template Name: Day - v4.7.0
+  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -44,90 +49,20 @@
 
       <h1 class="logo"><a href="index.html">NOISE POLLUTION MEASUREMENT SYSTEM</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          
-          <li class="dropdown"><a href="#"><span>Select the location</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href=#services>Overall</a></li>
-              <li><a href="locationa.html">Location-A</a></li>
-              <li><a href="locationb.html">Location-B</a></li>
-              <li><a href="locationc.html">Location-C</a></li>
-              <li><a href="locationd.html">Location-D</a></li>
-              
-            </ul>
-          </li>
-          
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      <!-- .navbar -->
+      <div id="button"><a href="index.html">Go Back</a></div>
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-      <h1>Come on!</h1>
-        <h1>Lets monitor the noise in our factory</h1>
-      <h2>This website shows you the noise levels at different locations in the factory. Get a dedicated setup for your factory</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-            <img src="assets/img/kar.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" align="center">
-            <h3>What is this product?</h3>
-            <p class="fst-italic">
-              One of the major issues we face in the current scenario is various forms of pollution around us, and one among 
-which is the noise pollution. For instance, in a metropolitan city you have all forms of transport- air, land and 
-rail together, and the amount of noise pollution is something huge that we cannot even imagine. Survival of 
-humans is impossible without these technological advancements, but at the same time this much of pollution 
-also leads us to harmful effects in the environment. This arises the need for reduction in noise pollution to the 
-best possible extent, and for which we need to first measure the amount of noise pollution in the surroundings. 
-Our aim of this product is to design a Noise Pollution Measurement System to monitor the levels of noise in 
-the surroundings at constant intervals in the day, which is efficient and cost effective. Further the measured 
-values need to be published in a website using internet of things technology.
-
-            </p>
-            
-            <p class="fst-italic">
-              The market for this product is majorly the government agencies, who can procure this for monitoring noise 
-pollution and thereby looking on measures to reduce it. This product can be used in crowded places, where 
-constant monitoring of noise is needed. This product can also be used in industries, where additional care is 
-required in maintaining the noise level.
-
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    
-
-    
-
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    
       <div class="container">
 
         <div class="section-title">
-          <span>Average noise levels</span>
-          <h2>Average noise levels</h2>
+          <span>Location-A</span>
+          <h2>Location-A</h2>
           <body>
       
             <div>
@@ -146,7 +81,7 @@ required in maintaining the noise level.
                 labels=[]
                 datal=[]   
                 $.ajax({
-                         url: "https://egeqhlb3ai.execute-api.us-west-2.amazonaws.com/dev/iot-data/3",
+                         url: "https://egeqhlb3ai.execute-api.us-west-2.amazonaws.com/dev/iot-data/1",
                          type: 'GET',
                          success: function(res) {
                           res.sort(function (a, b) {
@@ -165,10 +100,11 @@ required in maintaining the noise level.
           const data = {
           labels: labels,
           datasets: [{
-            label: 'Average sensor value data',
+            label: 'Data of sensor at location A in dBs',
             backgroundColor: 'pink',
             borderColor: 'green',
-            data: datal
+            data: datal,
+            
           }]
         };
         
@@ -193,30 +129,12 @@ required in maintaining the noise level.
           </body>
         </div>
       </div>
-    </section><!-- End Services Section -->
+    <!-- End Services Section -->
 
 
     
     
 
-
-    
-
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="text-center">
-          
-          <h3 align="right">Of all the varieties of modern pollution, noise is the most insidious</p>
-          <p align="right">-Robert Lacey</p>
-          
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
-
-    
 
     
 
